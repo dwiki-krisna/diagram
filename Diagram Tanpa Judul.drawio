@@ -1,9 +1,69 @@
 <mxfile host="app.diagrams.net">
-  <diagram name="Halaman-1" id="lg2mifzh6DKZBY7KeXnf">
+  <diagram name="Arsitektur TEMATIK" id="lg2mifzh6DKZBY7KeXnf">
     <mxGraphModel dx="1030" dy="562" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="Hz1kDhoPzl6weBtIBgwB-1" parent="1" style="text;html=1;align=center;verticalAlign=middle;fontSize=20;fontStyle=1;fontColor=#1f2933;fontFamily=Helvetica;" value="Arsitektur High-Level Aplikasi TEMATIK" vertex="1">
+          <mxGeometry height="34" width="400" x="250" y="24" as="geometry" />
+        </mxCell>
+        <mxCell id="Hz1kDhoPzl6weBtIBgwB-2" parent="1" style="text;html=1;align=center;verticalAlign=middle;fontSize=12;fontColor=#7b8794;fontFamily=Helvetica;" value="Pertukaran data transaksi DJBC ↔ PPATK" vertex="1">
+          <mxGeometry height="20" width="400" x="250" y="56" as="geometry" />
+        </mxCell>
+        <mxCell id="Hz1kDhoPzl6weBtIBgwB-3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=14;fillColor=#f4f5f7;strokeColor=#9aa5b1;fontColor=#3e4c59;fontFamily=Helvetica;fontSize=12;shadow=0;spacingTop=4;" value="DJBC&#xa;&#xa;Kirim invoice batch&#xa;Cek status verifikasi" vertex="1">
+          <mxGeometry height="80" width="170" x="80" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="Hz1kDhoPzl6weBtIBgwB-4" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=14;fillColor=#e8f0fe;strokeColor=#4285f4;fontColor=#174ea6;fontFamily=Helvetica;fontSize=12;shadow=0;spacingTop=4;" value="TEMATIK Frontend&#xa;&#xa;API: terima invoice (batch),&#xa;layani cek status (JSON)" vertex="1">
+          <mxGeometry height="80" width="200" x="350" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="Hz1kDhoPzl6weBtIBgwB-5" parent="1" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=14;fillColor=#fff4e5;strokeColor=#f5a623;fontColor=#8a5300;fontFamily=Helvetica;fontSize=12;shadow=0;" value="DB TEMATIK FE&#xa;store data invoice &amp; status" vertex="1">
+          <mxGeometry height="90" width="180" x="360" y="260" as="geometry" />
+        </mxCell>
+        <mxCell id="Hz1kDhoPzl6weBtIBgwB-6" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=8;dashed=1;dashPattern=6 4;fillColor=#fffaf2;strokeColor=#f5a623;fontColor=#8a5300;fontFamily=Helvetica;fontSize=13;fontStyle=1;verticalAlign=top;align=left;spacingLeft=14;spacingTop=10;shadow=0;" value="DB TEMATIK BE" vertex="1">
+          <mxGeometry height="200" width="430" x="300" y="410" as="geometry" />
+        </mxCell>
+        <mxCell id="Hz1kDhoPzl6weBtIBgwB-7" parent="1" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=12;fillColor=#fff4e5;strokeColor=#f5a623;fontColor=#8a5300;fontFamily=Helvetica;fontSize=12;shadow=0;" value="DB TEMATIK BE&#xa;tabel transaksi&#xa;+ status terbaru" vertex="1">
+          <mxGeometry height="120" width="140" x="325" y="455" as="geometry" />
+        </mxCell>
+        <mxCell id="Hz1kDhoPzl6weBtIBgwB-8" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=20;fillColor=#e6f4ea;strokeColor=#34a853;fontColor=#0d652d;fontFamily=Helvetica;fontSize=11;shadow=0;" value="JOB · SP SYNC&#xa;sync 2 arah FE ↔ BE" vertex="1">
+          <mxGeometry height="50" width="190" x="510" y="455" as="geometry" />
+        </mxCell>
+        <mxCell id="Hz1kDhoPzl6weBtIBgwB-9" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=20;fillColor=#e6f4ea;strokeColor=#34a853;fontColor=#0d652d;fontFamily=Helvetica;fontSize=11;shadow=0;" value="JOB · SP Verifikasi&#xa;cocokkan transaksi vs goAML" vertex="1">
+          <mxGeometry height="50" width="190" x="510" y="525" as="geometry" />
+        </mxCell>
+        <mxCell id="Hz1kDhoPzl6weBtIBgwB-10" parent="1" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=14;fillColor=#fdecea;strokeColor=#ea4335;fontColor=#a50e0e;fontFamily=Helvetica;fontSize=12;shadow=0;" value="DB CLASA goAML&#xa;data transaksi&#xa;pembanding" vertex="1">
+          <mxGeometry height="110" width="120" x="770" y="450" as="geometry" />
+        </mxCell>
+        <mxCell id="Hz1kDhoPzl6weBtIBgwB-11" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=14;fillColor=#f3e8fd;strokeColor=#a142f4;fontColor=#6a1b9a;fontFamily=Helvetica;fontSize=12;shadow=0;spacingTop=4;" value="Aplikasi UI TEMATIK BE&#xa;&#xa;Workflow verifikasi transaksi&#xa;Simpan status terbaru ke DB BE" vertex="1">
+          <mxGeometry height="90" width="270" x="330" y="670" as="geometry" />
+        </mxCell>
+        <mxCell id="Hz1kDhoPzl6weBtIBgwB-12" parent="1" style="rounded=1;whiteSpace=wrap;html=1;arcSize=14;fillColor=#f4f5f7;strokeColor=#9aa5b1;fontColor=#3e4c59;fontFamily=Helvetica;fontSize=12;shadow=0;spacingTop=4;" value="Internal PPATK&#xa;&#xa;Petugas verifikasi" vertex="1">
+          <mxGeometry height="70" width="190" x="370" y="830" as="geometry" />
+        </mxCell>
+        <mxCell id="Hz1kDhoPzl6weBtIBgwB-13" edge="1" parent="1" source="Hz1kDhoPzl6weBtIBgwB-3" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;startArrow=block;strokeColor=#7b8794;strokeWidth=1.5;fontColor=#7b8794;fontSize=10;fontFamily=Helvetica;" target="Hz1kDhoPzl6weBtIBgwB-4" value="API · kirim batch / cek status (JSON)">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Hz1kDhoPzl6weBtIBgwB-14" edge="1" parent="1" source="Hz1kDhoPzl6weBtIBgwB-4" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;strokeColor=#4285f4;strokeWidth=1.5;fontColor=#4285f4;fontSize=10;fontFamily=Helvetica;" target="Hz1kDhoPzl6weBtIBgwB-5" value="store data">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Hz1kDhoPzl6weBtIBgwB-15" edge="1" parent="1" source="Hz1kDhoPzl6weBtIBgwB-5" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;startArrow=block;dashed=1;dashPattern=6 4;strokeColor=#34a853;strokeWidth=1.5;fontColor=#0d652d;fontSize=10;fontFamily=Helvetica;" target="Hz1kDhoPzl6weBtIBgwB-7" value="SYNC 2 arah (JOB SP SYNC)">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Hz1kDhoPzl6weBtIBgwB-16" edge="1" parent="1" source="Hz1kDhoPzl6weBtIBgwB-8" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=none;dashed=1;dashPattern=4 4;strokeColor=#9ccc9c;strokeWidth=1;" target="Hz1kDhoPzl6weBtIBgwB-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Hz1kDhoPzl6weBtIBgwB-17" edge="1" parent="1" source="Hz1kDhoPzl6weBtIBgwB-7" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;dashed=1;dashPattern=6 4;strokeColor=#34a853;strokeWidth=1.5;fontColor=#0d652d;fontSize=10;fontFamily=Helvetica;" target="Hz1kDhoPzl6weBtIBgwB-10" value="verifikasi">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Hz1kDhoPzl6weBtIBgwB-18" edge="1" parent="1" source="Hz1kDhoPzl6weBtIBgwB-9" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=none;dashed=1;dashPattern=4 4;strokeColor=#9ccc9c;strokeWidth=1;" target="Hz1kDhoPzl6weBtIBgwB-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Hz1kDhoPzl6weBtIBgwB-19" edge="1" parent="1" source="Hz1kDhoPzl6weBtIBgwB-11" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;startArrow=block;strokeColor=#a142f4;strokeWidth=1.5;fontColor=#6a1b9a;fontSize=10;fontFamily=Helvetica;" target="Hz1kDhoPzl6weBtIBgwB-7" value="akses &amp; simpan workflow">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Hz1kDhoPzl6weBtIBgwB-20" edge="1" parent="1" source="Hz1kDhoPzl6weBtIBgwB-12" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=block;startArrow=block;strokeColor=#7b8794;strokeWidth=1.5;fontColor=#7b8794;fontSize=10;fontFamily=Helvetica;" target="Hz1kDhoPzl6weBtIBgwB-11" value="akses UI">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
